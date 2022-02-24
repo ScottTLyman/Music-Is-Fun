@@ -7,6 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+  <link rel="stylesheet" href="//cdn.materialdesignicons.com/5.4.55/css/materialdesignicons.min.css">
   <link rel="shortcut icon" href="https://bcw.blob.core.windows.net/public/img/9977764104160066" type="image/x-icon">
   <link rel="stylesheet" href="assets/style/main.css">
   <title>music-is-fun</title>
@@ -25,7 +26,8 @@
   <main class="container-fluid">
     <section class="row my-3">
       <div class="col-lg-6 m-auto">
-        <form onsubmit="app.songsController.search(event)" class="d-flex align-items-center bg-dark elevation-2 rounded p-1 shadow">
+        <form onsubmit="app.songsController.search(event)"
+          class="d-flex align-items-center bg-dark elevation-2 rounded p-1 shadow">
           <input type="text" class="form-control" name="query" placeholder="Search For Music" />
           <button class="btn btn-dark" type="submit">
             Search
@@ -35,16 +37,36 @@
     </section>
 
     <section class="row">
-      <div class="col-lg-6">
+      <div class="col-lg-3">
         <h3 class="text-center">Search Results</h3>
         <div id="songs" class="col-12 m-0">
           <!-- api songs -->
+          <!-- <div class="card" style="width: 18rem;">
+            <img src="..." class="card-img-start" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div> -->
         </div>
       </div>
-      <div class="col-lg-6">
+      <div class="col-6" id="now-playing">
+        <!-- <div>
+          <img src="${this.albumArt}" alt="">
+          <h2>Artist Name | Song Title</h2>
+          <h4>Album Name | Price</h4>
+          <div>Song Preview</div>
+          <div>User</div>
+        </div> -->
+
+      </div>
+      <div class="col-lg-3">
         <h3 class="text-center">Playlist</h3>
         <div class="col-12 m-0" id="playlist">
           <!-- template for playlist -->
+
         </div>
       </div>
     </section>
