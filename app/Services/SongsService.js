@@ -44,7 +44,7 @@ class SongsService {
     let song = ProxyState.activeSong
     const res = await sandBoxApi.post('', song)
     console.log(['add song'], res.data)
-    ProxyState.playlist = [...ProxyState.playlist, new Song(res.data)]
+    ProxyState.playlist = [new Song(res.data), ...ProxyState.playlist]
     //TODO you only have an id, you will need to find it in the store before you can post it
     //TODO After posting it what should you do?
   }

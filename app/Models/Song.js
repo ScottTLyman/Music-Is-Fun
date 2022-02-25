@@ -27,9 +27,8 @@ export default class Song {
   get playlistTemplate() {
     return `
   <div class="bg-light">
-    <h5 class="d-flex justify-content-between p-2">Song: ${this.title}<button class="btn btn-outline-danger mdi mdi-delete" onclick="app.songsController.removeSong('${this.id}')"></button></h5>
+    <h5 class="d-flex justify-content-between p-2">Song: ${this.title}<button class="btn btn-outline-danger mdi mdi-trash-can-outline" onclick="app.songsController.removeSong('${this.id}')"></button></h5>
     <h6 class="p-2"><span class="text-decoration-underline">Artist:</span> ${this.artist}</h6>
-    
   </div>
         `;
   }
